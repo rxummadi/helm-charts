@@ -3,7 +3,7 @@ entries:
   application-chart:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2026-03-01T21:11:32.896094-06:00"
+    created: "2026-03-01T22:42:06.138376-06:00"
     description: Reusable Helm chart for Deployment, ClusterIP Service, ServiceAccount
       and HPA
     digest: 110c01522704749b53ed50c0d0fb8002c94a078017f5c9b351566308b26f64a1
@@ -20,7 +20,7 @@ entries:
   istio-routes:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2026-03-01T21:11:32.895712-06:00"
+    created: "2026-03-01T22:42:06.139767-06:00"
     description: Helm chart for Istio VirtualService and DestinationRule resources
     digest: 394bfef4b114d2ebe904d8809578ed30fd99a90992582bc875d20d543ac957bb
     keywords:
@@ -34,4 +34,23 @@ entries:
     urls:
     - https://rxummadi.github.io/helm-charts/istio-routes-0.1.0.tgz
     version: 0.1.0
-generated: "2026-03-01T21:11:32.894919-06:00"
+  springboot-bundle:
+  - apiVersion: v2
+    created: "2026-03-01T22:42:06.140683-06:00"
+    dependencies:
+    - condition: app.enabled
+      name: application-chart
+      repository: https://rxummadi.github.io/helm-charts/
+      version: 0.1.0
+    - condition: istio.enabled
+      name: istio-routes
+      repository: https://rxummadi.github.io/helm-charts/
+      version: 0.1.0
+    description: Umbrella chart for all SpringBoot microservices
+    digest: 4b21479c736a89bca980e0eb9c8fb5b63ed2fefd7d8bd0d3246804e390e31eb0
+    name: springboot-bundle
+    type: application
+    urls:
+    - https://rxummadi.github.io/helm-charts/springboot-bundle-1.0.0.tgz
+    version: 1.0.0
+generated: "2026-03-01T22:42:06.137897-06:00"
