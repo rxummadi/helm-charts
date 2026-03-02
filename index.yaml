@@ -15,7 +15,7 @@ entries:
     name: application-chart
     type: application
     urls:
-    - https://rxummadi.github.io/helm-charts/helm-charts/application-chart-0.1.0.tgz
+    - https://rxummadi.github.io/helm-charts/application-chart-0.1.0.tgz
     version: 0.1.0
   istio-routes:
   - apiVersion: v2
